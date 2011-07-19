@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('button').click(function(){
+                $('<tr>'+$('.refferals tbody tr:first').html()+'</tr>').appendTo('.refferals tbody');               
+            });
+            $('input[type=submit]').click(function(){
+                $('body').html(
+                    $('#post-submit-template').html()
+                );
+            });
+        });
+        
+    </script>
+    <style type="text/css">
+        fieldset {
+            width: 730px; 
+            margin-bottom: 1em;
+        }
+        .add-more span {
+            font-size: 8pt;    
+        }
+       
+    </style>
+<body>
+
+        <h1>Refer a min of 5 people...</h1>
+        <fieldset>
+            <legend>Fill your own details</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Surname</td>
+                        <td>Contact number</td>
+                        <td>Email Address</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="name"></td>
+                        <td><input type="surname"></td>
+                        <td><input type="contact-number"></td>
+                        <td><input type="email"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        
+        <fieldset class="refferals">
+            <legend>Fill in a minimum of 5 names to be eligible to enter the competition</legend>
+            <table>
+                <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Surname</td>
+                    <td>Contact number</td>
+                    <td>Email Address</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="name"></td>
+                        <td><input type="surname"></td>
+                        <td><input type="contact-number"></td>
+                        <td><input type="email"></td>
+                    </tr>
+                
+                    <tr>
+                        <td><input type="name"></td>
+                        <td><input type="surname"></td>
+                        <td><input type="contact-number"></td>
+                        <td><input type="email"></td>
+                    </tr>
+                
+                    <tr>
+                        <td><input type="name"></td>
+                        <td><input type="surname"></td>
+                        <td><input type="contact-number"></td>
+                        <td><input type="email"></td>
+                    </tr>
+                
+                    <tr>
+                        <td><input type="name"></td>
+                        <td><input type="surname"></td>
+                        <td><input type="contact-number"></td>
+                        <td><input type="email"></td>
+                    </tr>
+                
+                    <tr>
+                        <td><input type="name"></td>
+                        <td><input type="surname"></td>
+                        <td><input type="contact-number"></td>
+                        <td><input type="email"></td>
+                    </tr>
+                
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="add-more">
+                            <button>Fill in more names</button> <span>to increase your chance to win</span> 
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </fieldset>
+
+        <input type="submit">
+
+        <div id="post-submit-template" style="display: none;">
+            <h1>Thank you</h1>
+            <p>Form was submitted.</p>
+        </div>
+</body>
+</html>
